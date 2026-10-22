@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Xaria Privacy Policy</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<h1>Xaria Privacy Policy</h1>
+<p class="meta"><strong>App:</strong> Xaria (<code>com.aria2.app</code>) &middot; <strong>Developer:</strong> [DEVELOPER NAME] &middot; <strong>Last updated:</strong> 2026-10-22</p>
+
+<p>Xaria is a download manager built around aria2. It can run aria2 on your phone or control an aria2 server you run yourself. It has no accounts, shows no ads and sells no data. This page says what leaves your device.</p>
+
+<h2>What stays on your device</h2>
+<p>Your downloads, download list, server profiles, RPC secrets and settings are stored only in the app's private storage. We cannot see them. They are excluded from Android backups and device transfers. Uninstalling the app deletes them. The built-in aria2 engine listens only on your phone (127.0.0.1) behind a random secret created when you install the app.</p>
+
+<h2>Where your downloads and servers connect</h2>
+<p>Xaria connects to the addresses you download from, and to the aria2 servers you add yourself. This traffic goes straight between your phone and those hosts, never through us. If you use BitTorrent, peers and trackers can see your IP address, as with any BitTorrent client. Connections to servers without TLS (plain http) are allowed, and the app warns you about them.</p>
+
+<h2>Crash reports and anonymous usage (Firebase)</h2>
+<p>To fix crashes and see which features matter, Xaria uses Google Firebase Crashlytics and Firebase Analytics. Firebase acts as our service provider and processes this data on our behalf; we do not sell it or use it for advertising.</p>
+<!-- OPEN: "Shared" in the Data safety form: sheet proposes Shared = No (Firebase as service provider); conservative alternative is Shared = Yes (analytics). Owner to choose; wording above must match. -->
+<p>This is <strong>on by default</strong> and the app does not ask first. You can turn it off at any time with one switch, <em>Share crash reports and anonymous usage</em> (in the Servers dialog). It is always off in debug builds. Turning it off stops all further collection by both services.</p>
+<p>What Xaria itself sends:</p>
+<table>
+<tr><th>Data</th><th>Purpose</th></tr>
+<tr><td>Crash reports and error reports: the stack trace, and for handled problems only the kind of failure (for example a network timeout class, a non-zero aria2 exit code number, or that Android refused to start the background service)</td><td>Find and fix bugs</td></tr>
+<tr><td>Which screen was open (dashboard, servers, add download, limits) and whether the built-in engine was running, attached to crash reports</td><td>Reproduce crashes</td></tr>
+<tr><td>Device state attached to crash reports: debug or release build, whether installed from Google Play, language, low-memory device, battery saver on, connection type (Wi-Fi, mobile, VPN or none; never the network name), CPU type</td><td>Reproduce crashes</td></tr>
+<tr><td>Usage counts: the kind of server profile in use (built-in, local tunnel, remote with or without TLS); engine state changes (stopped, starting, running, error); and for each finished download: success or failure, a grouped error type, a size range (for example 10-100 MB) and whether it was a direct or torrent download</td><td>See what works and what fails</td></tr>
+</table>
+<p>The app filters what it reports: URLs, magnet links, file paths and long secret-like strings are removed from crash text, including the text of unexpected crashes, before it is sent. It does not intentionally send links, file names, server addresses, ports, secrets, profile names or the contents of downloads.</p>
+<p>The Firebase libraries also collect some standard data on their own: device model, operating system and app version, language, general usage events (such as app opens and sessions), and a random per-install identifier (the Firebase installation / app-instance ID). Google derives an approximate country or region from your IP address when the data arrives. This identifier is not your advertising ID and is not linked to your name or Google account by us. Xaria does not use the advertising ID, and its advertising permissions are removed from the app.</p>
+<!-- OPEN: Approximate location via Analytics IP (sheet section 3): currently not declared in the Data safety form; align form and the sentence above if Firebase's Play disclosure guidance lists it. -->
+<p>Data is encrypted in transit. How long Firebase keeps it is set by Google's retention settings. See <a href="https://firebase.google.com/support/privacy">Firebase privacy information</a> and the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+
+<h2>What we do not collect</h2>
+<p>Your advertising ID, location, contacts, files, download links, magnet links, file names, server addresses, passwords or RPC secrets, Wi-Fi names, or any account or personal information.</p>
+
+<h2>Permissions</h2>
+<p>Internet and network state (downloads, remote servers, connection type); notifications (download progress); foreground service of type data sync (keeps the built-in engine running while downloads continue); wake lock (keep downloading with the screen off; you can switch it off). No location, contacts, all-files, advertising-ID or account access.</p>
+
+<h2>Your choices and deleting data</h2>
+<p>Use the switch above to stop collection at any time. We have no account system, so we cannot look up your data by name. To ask us to delete reports from your install, email us the installation identifier or a description of when the crash happened, and we will delete what we can match. Uninstalling removes all local data.</p>
+
+<h2>Children</h2>
+<p>Xaria is a general-purpose tool and is not directed at children.</p>
+
+<h2>Changes</h2>
+<p>If this policy changes, the date above changes and the new version replaces this page.</p>
+
+<h2>Contact</h2>
+<p>sgateori@proton.me</p>
+</body>
+</html>
